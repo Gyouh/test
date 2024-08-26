@@ -1,0 +1,591 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a, button{cursor: pointer;}
+
+
+@keyframes miganie {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  #heroSection__top__rec{animation: miganie 1s infinite;}
+
+/* normalization */
+
+#playBtn i{margin-right: 1rem;}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -10;
+  }
+
+body
+{
+    font-family: arial;
+    /* background-color: rgb(168, 0, 0); */
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+button
+{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+ul{list-style: none;}
+
+
+#closeMenuBtn
+{
+    background-color: transparent;
+    font-size: 2.5rem;
+
+}
+
+#CloseMenu i
+{
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+}
+
+header
+{
+    padding: 1rem 4rem;
+    margin-bottom: 1.5rem;
+    position: fixed;
+    top: 4%;
+    width: 100%;
+    z-index: 1000;
+}
+
+header > nav
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header > nav a, header > nav i{color: white;}
+
+header > nav > div > a, nav button
+{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+header > nav > ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > nav > ul li:not(:last-child){margin-right: .5rem;}
+
+header > nav > ul a, header > nav > div > a, nav button{padding: .5rem 1rem;}
+
+header > nav > ul a:hover, header > nav > div > a:hover
+{
+    color: #d0311d;
+    border-radius: 4rem;
+}
+
+nav i:hover
+{
+    color: #d0311d;
+    border-radius: 4rem;
+}
+
+.menu
+{
+    display: none;
+    top: 0;
+    position: fixed;
+    background-color: #101010;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu video{opacity: 0;}
+
+.menu ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 1500%;
+    font-weight: 700;
+    height: 100%;
+}
+
+.menu a{color: white;}
+
+.menu li
+{
+    transition: .5s;
+    overflow: hidden;
+}
+
+.menu a:first-child > li
+{
+    width: 295px;
+}
+
+.menu  a:last-child > li
+{
+    width: 230px;
+}
+
+.menu a > li:hover
+{
+    transition: .5s;
+    width: 1200px;
+}
+
+
+.box {
+    --b: 1px;   /* thickness of the border */
+    --c: white;   /* color of the border */
+    --w: 1rem;  /* width of border */
+    
+  
+    border: var(--b) solid #0000; /* space for the border */
+    --_g: #0000 90deg,var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+    
+    /* padding: 2rem; */
+    /*Irrelevant code*/  
+    /* width:200px;
+    height:100px;
+    box-sizing:border-box;
+    margin:5px;
+    display:inline-flex;
+    font-size:30px;
+    justify-content:center;
+    align-items:center;
+    text-align:center; */
+  }
+  
+  ::selection
+  {
+     background-color: #d0311d;
+     color: #101010;
+  }
+   
+   html, body 
+   {
+     scroll-behavior: smooth;
+     scrollbar-width: thin;
+     scrollbar-color: #d0311d transparent; 
+   }
+
+
+main
+{
+    padding-top: 9rem;
+    /* padding-top: 100vh; */
+}
+main > div{z-index: 500;}
+
+
+.heroSection
+{
+    margin: 0 6rem;
+    margin-bottom: 10%;
+    /* position: fixed;  */
+    /* top: 18%;
+    z-index: -1; */
+}
+
+#heroSection__top
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem 1.5rem;
+}
+
+
+#heroSection__top > div i
+{
+    font-size: 1.2rem;
+}
+
+#heroSection__top__rec
+{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+}
+
+#recDot
+{
+    background-color: red; 
+    border-radius: 100%;
+    width: .75rem;
+    height: .75rem;
+    color: transparent;
+}
+
+#heroSection__mid, #heroSection__end
+{
+    margin-bottom: 5rem;
+}
+
+#heroSection__mid
+{
+    text-align: end;
+    letter-spacing: 2px;
+    margin-bottom: 8rem;
+}
+
+#heroSection__mid li{margin-bottom: .5rem;}
+
+
+#heroSection__end
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 1.5rem;
+}
+
+
+
+#heroSection__end h2
+{
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+}
+
+
+#heroSection__end  p {min-width: 500px;}
+
+#heroSection__end > div:first-child
+{
+    width: 35%;
+    line-height: 2rem;
+    letter-spacing: 2px;
+}
+
+#heroSection__end button
+{
+    background-color: transparent;
+    color: white;
+    
+}
+
+#heroSection__centerCamera
+{
+    position: absolute; /* or relative depending on the context */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.projectsSection {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #101010;
+    padding: 10rem 0;
+    width: 100%;
+}
+
+.cardsContainer {
+    display: flex;
+}
+
+.card { 
+    flex: 0 0 auto;
+    margin-left: 5rem;
+}
+
+.card:first-child{margin-left: 12%;}
+
+
+.card__mod
+{
+    --b: 1px;   /* thickness of the border */
+    --c: white;   /* color of the border */
+    --w: 1rem;  /* width of border */
+    
+  
+    border: var(--b) solid #0000; /* space for the border */
+    --_g: #0000 90deg,var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+
+      margin-bottom: 6rem; 
+      margin-left: 6rem;
+      margin-right: 6rem;
+}
+
+
+.card__mod
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card__mod a
+{
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24rem;
+    cursor: pointer;
+}
+
+.card__mod i
+{
+    color: #d0311d;
+    font-size: 1.5rem;
+    margin-left: .5rem;
+}
+
+.projectsSection{padding-bottom: 18rem;}
+
+.projectsSection > div
+{
+    display: flex;
+    overflow-x: scroll;
+    min-width: 100%;
+}
+
+.card
+{
+    width: 50%;
+    border: 1px solid white;
+    box-shadow: 1px -1px 1px  white;
+    border-bottom: none;
+    margin-bottom: 2rem;
+    margin-left: 6rem;
+}  
+
+.card video
+{
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+
+.card > ul
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card button
+{
+    --b: 1px;   /* thickness of the border */
+    --c: white;   /* color of the border */
+    --w: .5rem;  /* width of border */
+    
+  
+    border: var(--b) solid #0000; /* space for the border */
+    --_g: #0000 90deg,var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+
+      color: white;
+      padding: .5rem 1rem;
+      transition: .5s;
+
+}
+
+.card button:hover
+{
+    color: #d0311d;
+    --c: #d0311d;
+    transition: .5s;
+}
+
+footer, footer a{color: white;}
+
+footer
+{
+    background-color: #101010;
+}
+
+.footer__top{width: 100%;}
+
+.footer__top ul
+{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer__top li{transition: .5s;}
+.footer__top li:hover
+{
+    color: #d0311d;
+    transition: .5s;
+}
+
+.footer__mid p{font-size: 400%;}
+
+.footer__mid ul
+{
+    display: flex;
+    font-size: 400%;
+}
+
+.footer__mid ul > li:nth-child(2n+2)
+{
+    margin: 0 2rem;
+    color: #d0311d;
+}
+
+/* asd */
+
+.wrapper {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  @keyframes scrollLeft {
+    to {
+      left: -1000px;
+    }
+  }
+  
+  @keyframes scrollRight {
+    to {
+      right: -1500px;
+    }
+  }
+  
+  .itemLeft,
+  .itemRight {
+    width: 100%;
+    /* background-color: #e11d48; */
+    border-radius: 6px;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+  
+  .itemLeft {
+    left: max(calc(100% * 3), 100%);
+    animation-name: scrollLeft;
+  }
+  
+  .itemRight {
+    right: max(calc(100% * 3), 100%);
+    animation-name: scrollRight;
+  }
+  
+  .item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+  }
+  
+  .item3 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+  }
+  
+  .item5 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+  }
+
+  .footer__end{padding: 0 5rem 2rem;}
+
+.footer__end > div:first-child
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+}
+
+.footer__end > div:last-child
+{
+    display: flex;
+    justify-content: end;
+
+}
+
+.footer__end ul h2
+{
+    margin-bottom: 1rem;
+}
+
+
+.footer__end ul li
+{
+    margin-bottom: .5rem;
+    margin-right: 1rem;
+}
+
+.footer__end ul i{margin-left: .5rem;}
+
+.footer__end button
+{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    gap: .5rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: end;
+}
+
+
+
