@@ -77,7 +77,7 @@ header
     position: fixed;
     top: 4%;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 header > nav
@@ -112,20 +112,36 @@ header > nav > ul a:hover, header > nav > div > a:hover
     border-radius: 4rem;
 }
 
-nav i:hover
+/* nav i:hover
 {
     color: #d0311d;
     border-radius: 4rem;
+} */
+
+nav i
+{
+    border-radius: 4rem;
+    border-radius: 4rem;
+    border-radius: 4rem;
+    border-radius: 4rem;
+ &:hover
+ {
+    color: #d0311d;
+    border-radius: 4rem;
+ }
 }
 
 .menu
 {
     display: none;
+    /* top: 90%; */
     top: 0;
     position: fixed;
     background-color: #101010;
+    /* background-color: red; */
     width: 100vw;
     height: 100vh;
+    z-index: 9999;
 }
 
 .menu video{opacity: 0;}
@@ -149,6 +165,8 @@ nav i:hover
     overflow: hidden;
 }
 
+#menuFirstChildH{width: 225px;}
+
 .menu a:first-child > li
 {
     width: 295px;
@@ -156,10 +174,10 @@ nav i:hover
 
 .menu  a:last-child > li
 {
-    width: 230px;
+    width: 228px;
 }
 
-.menu a > li:hover
+.menu a > li:hover, #menuFirstChildH:hover
 {
     transition: .5s;
     width: 1200px;
@@ -211,18 +229,45 @@ nav i:hover
 main
 {
     padding-top: 9rem;
-    /* padding-top: 100vh; */
+    padding-top: 100vh;
 }
-main > div{z-index: 500;}
 
 
 .heroSection
 {
+    height: 72vh;
     margin: 0 6rem;
     margin-bottom: 10%;
-    /* position: fixed;  */
-    /* top: 18%;
-    z-index: -1; */
+    position: fixed; 
+    top: 18%;
+    /* z-index: -1; */
+}
+
+.heroSection--mod
+{
+    position: fixed; 
+    /* height: 68vh; */
+}
+
+.heroSection--mod
+{
+    display: flex;
+    align-items: end;
+    width: 88%;
+    left: 50%;
+    top: 55%;
+    height: 72vh;
+    transform: translate(-50%, -50%);
+}
+
+.heroSection--mod  h2
+{
+    font-size: 400%;
+}
+
+.heroSection--mod > div
+{
+    width: 100%;
 }
 
 #heroSection__top
@@ -244,6 +289,27 @@ main > div{z-index: 500;}
     align-items: center;
     gap: .5rem;
 
+}
+
+#videosBtns
+{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#videosBtns > button
+{
+    margin: 0 2.5rem;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    background-color: #101010;
+    color: #d0311d;
+    font-weight: bold;
 }
 
 #recDot
@@ -316,8 +382,8 @@ main > div{z-index: 500;}
     overflow-x: auto;
     white-space: nowrap;
     background-color: #101010;
-    padding: 10rem 0;
     width: 100%;
+    border-radius: 2rem 2rem 0 0;
 }
 
 .cardsContainer {
@@ -369,7 +435,7 @@ main > div{z-index: 500;}
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 24rem;
+    padding: 0 24svw;
     cursor: pointer;
 }
 
@@ -380,13 +446,14 @@ main > div{z-index: 500;}
     margin-left: .5rem;
 }
 
-.projectsSection{padding-bottom: 18rem;}
 
 .projectsSection > div
 {
     display: flex;
     overflow-x: scroll;
     min-width: 100%;
+    margin: 10rem 0;
+
 }
 
 .card
@@ -443,14 +510,110 @@ main > div{z-index: 500;}
     transition: .5s;
 }
 
+
+.serviceSecion
+{
+    background-color: #101010;
+    z-index: 999;
+    position: sticky;
+}
+
+
+.serviceSecion__card
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: .25s;
+    border-bottom: 1px solid #202020;
+}
+
+.serviceSecion__card:hover
+{
+    background-color: #d0311d;
+    color: #202020;
+    cursor: pointer;
+    transition: .25s;
+}
+
+
+.serviceSecion__card > div
+{
+    width: 25%;
+    text-align: justify;
+}
+
+.serviceSecion__card > h2
+{
+    width: 25%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-right: 10%;
+}
+
+#main--mod
+{
+    padding-top: 0;
+}
+
+.aboutSection
+{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+
+.aboutSection > div, .aboutSection > h1
+{
+    text-align: justify;
+    margin: 0 auto;
+    width: 50%;
+    background-color: #101010;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.aboutSection h1
+{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.aboutSection h2{margin-bottom: 1rem;}
+
+.aboutSection > div > div
+{
+    margin-bottom: 5rem;
+}
+
 footer, footer a{color: white;}
 
 footer
 {
+    z-index: 999;
+    position: sticky;
     background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-.footer__top{width: 100%;}
+.footer--mod
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.footer__top
+{
+    width: 100%;
+    padding-top: 8rem;
+}
 
 .footer__top ul
 {
@@ -547,6 +710,11 @@ footer
 
   .footer__end{padding: 0 5rem 2rem;}
 
+.footer__end 
+{
+    background-color: #101010;
+}
+  
 .footer__end > div:first-child
 {
     display: flex;
@@ -589,3 +757,90 @@ footer
 
 
 
+@keyframes bigCardAnimation
+{
+    from
+    {
+        scale: .9;
+    }
+    to
+    {
+        scale: 1;
+    }
+}
+
+.bigCardAnimation
+{
+    animation: bigCardAnimation linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.menuOpenAnimation
+{
+    animation: menuOpenAnimation linear;
+    animation-range: entry 0% cover 40%;
+    animation-timeline: view();
+}
+
+@keyframes menuOpenAnimation
+{
+    from
+    {
+        transform: translateY(-);
+        /* top: 100%; */
+    }
+}
+
+@media (max-width: 1400px) 
+{
+    .serviceSecion__card
+    {
+        flex-direction: column;
+    }
+
+    .serviceSecion__card > h2
+    {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .serviceSecion__card > div, .serviceSecion__card > h2{width: 80%;}
+}
+
+
+@media (max-width: 1110px)
+{
+    main{padding-top: 0;}
+
+    .projectsSection{border-radius: 0;} 
+}
+
+@media (max-width: 700px)
+{
+    .footer__end > div, .card > ul
+    {
+        flex-direction: column;
+    }
+
+    .footer__end > div:last-child{margin-top: .5rem;}
+    .footer__end > div:last-child, .footer__end ul li {text-align: center;}
+
+    .card > ul{gap: 2rem;}
+} 
+
+
+@media (max-width: 400px)
+{
+    .footer__top ul
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > nav > ul
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
