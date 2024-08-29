@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voidlord - portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script src="https://kit.fontawesome.com/bfff10259f.js" crossorigin="anonymous"></script>
-    <script src="./js/script.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/audioOn.js" defer></script>
 </head>
 <body>
     <video muted autoplay id="myVideo">
-        <source src="./videos/0806.mp4" type="video/mp4">
+        <source src="../videos/0806.mp4" type="video/mp4">
       </video>
       
     <header>
         <nav id="nav">
             <ul id="CloseMenu">
-                <li><a href=""><i class="fa-solid fa-arrow-up-right-from-square">Contact</i></a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-up-right-from-square">Contact</i></a></li>
                 <li><button id="closeMenuBtn"><i class="fa-solid fa-bars"></i></button></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <div class="menu">
+        <div class="menu menuOpenAnimation">
             <video autoplay loop muted id="myVideo">
-                <source src="./videos/0806.mp4" type="video/mp4">
+                <source src="../videos/0806.mp4" type="video/mp4">
               </video>
             <ul>
-                <a href="#"><li class="menuElementH">WORKS</li></a>
-                <a href="#"><li class="menuElementH">ABOUT</li></a>
+                <a href="../html/works.html"><li class="menuElementH">WORKS</li></a>
+                <a href="./about.html"><li class="menuElementH">ABOUT</li></a>
             </ul>
         </div>
 
@@ -49,10 +50,8 @@
             
             <div  id="heroSection__end">
                 <div>
-                    <!-- <h2>KEEP ONE'S BALANS</h2> -->
                     <h2>LOREM <span style="color: #d0311d;">IPSUM</span></h2>
 
-                    <!-- <p>We are creating video experience that transcends the ordinary, exploring the depths of the human experience through the medium the ability of your mind to believe that moving pictures are real. We are making them real!</p> -->
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a enim odio. Nunc at cursus arcu. Maecenas a dolor et ipsum dictum dignissim non sed dolor. Quisque malesuada mi et ligula pretium laoreet. Fusce semper</p>
                 </div>
 
@@ -61,11 +60,11 @@
             <div id="heroSection__centerCamera">+</div>
         </div>
         
-        <div class="projectsSection" >
+        <div class="projectsSection bigCardAnimation" >
             <div class="cardsContainer">
                 <div class="card">
                     <video muted autoplay loop>        
-                        <source src="./videos/2024-07-09_11-44-39.mp4" type="video/mp4">
+                        <source src="../videos/2024-07-09_11-44-39.mp4" type="video/mp4">
                     </video>
                     <ul>
                         <li>TITLE</li>
@@ -76,7 +75,7 @@
                 
                 <div class="card">
                     <video muted autoplay loop>        
-                        <source src="./videos/2024-06-29_18-39-04.mp4" type="video/mp4">
+                        <source src="../videos/2024-06-29_18-39-04.mp4" type="video/mp4">
                     </video>
                     <ul>
                         <li>TITLE</li>
@@ -87,7 +86,7 @@
                 
                 <div class="card">
                     <video muted autoplay loop>        
-                        <source src="./videos/2024-06-16_22-06-55.mp4" type="video/mp4">
+                        <source src="../videos/2024-06-16_22-06-55.mp4" type="video/mp4">
                     </video>
                     <ul>
                         <li>TITLE</li>
@@ -101,6 +100,42 @@
                 </div>
             </div>
         </div>
+
+        <div class="serviceSecion">
+            <div class="serviceSecion__card">
+                <h2>Walking and running animations</h2>
+                <div>
+                    <h2>150-450 R$</h2>
+                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat bibendum risus, sit amet ullamcorper tellus blandit nec. </p> </p>
+                </div>
+            </div>
+            
+            <div class="serviceSecion__card">
+                <h2>BASIC ANIMATIONS</h2>
+                <div>
+                    <h2>600-3.5K R$</h2>
+                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat bibendum risus, sit amet ullamcorper tellus blandit nec. </p> </p>
+                </div>
+            </div>
+            
+            <div class="serviceSecion__card">
+                <h2>Hand to hand combat animation</h2>
+                <div>
+                    <h2>2.5k-6k R$</h2>
+                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat bibendum risus, sit amet ullamcorper tellus blandit nec. </p> </p>
+                </div>
+            </div>
+            
+            <div class="serviceSecion__card">
+                <h2>Cutscene animations</h2>
+                <div>
+                    <h2>5k-25k R$</h2>
+                    <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat bibendum risus, sit amet ullamcorper tellus blandit nec. </p> </p>
+                </div>
+            </div>
+            
+        </div>
+
     </main>
 
     <footer>
@@ -108,8 +143,8 @@
         <div class="footer__top">
             <ul>
                 <a href="../html/index.html"><li>HOME</li></a>
-                <a href="#"><li>WORKS</li></a>
-                <a href="#"><li>ABOUT</li></a>
+                <a href="../html/works.html"><li>WORKS</li></a>
+                <a href="../html/about.html"><li>ABOUT</li></a>
             </ul>
         </div>
 
@@ -135,15 +170,17 @@
                     <li><a href="https://x.com/TheVoidlord0105" target="_blank">X <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 </ul>
 
+
+
                 <div>
-                    <p>Crafted by <a style="color: #d0311d;" href="" target="_blank">Interesting Group</a></p>
+                    <div id='AT-top'>
+                        <button aria-label='Go to Top'onclick="window.scrollTo(0,0)">BACK TO THE TOP<i style="color: #d0311d;" class="fa-solid fa-caret-up"></i></button>
+                    </div>
                 </div>
             </div>
             
-            <div >
-                <div id='AT-top'>
-                    <button aria-label='Go to Top'onclick="window.scrollTo(0,0)">BACK TO THE TOP<i style="color: #d0311d;" class="fa-solid fa-caret-up"></i></button>
-                </div>
+            <div>
+                <p>Crafted by <a style="color: #d0311d;" href="https://discord.gg/5Yfc3PHXDk" target="_blank">Interesting Group</a></p>
             </div>
         </div>
     </footer>
